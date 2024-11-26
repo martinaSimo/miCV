@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 90%; /* Aumentar la anchura a 90% para pantallas pequeñas */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+header {
+    text-align: center;
+    background-color: #d2b48c;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en diferentes líneas */
+    margin-top: 20px;
+}
+
+.profile-pic {
+    border-radius: 10px;
+    width: 120px;
+    height: 180px;
+    margin-right: 20px;
+    flex-shrink: 0; /* Evita que la imagen se reduzca en tamaño */
+}
+
+.detalles-personales {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-left: 5px solid #d2b48c;
+    flex-grow: 1; /* Permite que el contenedor de detalles crezca */
+}
+
+.detalles-personales h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.detalles-personales p {
+    margin-bottom: 10px;
+}
+
+.detalles-personales strong {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+h2 {
+    color: #d2b48c;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+section strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type: circle;
+    margin-bottom: 5px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea a la izquierda */
+    }
+
+    .profile-pic {
+        margin-bottom: 10px; /* Espacio debajo de la imagen en modo vertical */
+        width: 100%; /* Hacer que la imagen ocupe el ancho completo */
+        height: auto; /* Mantener proporciones */
+    }
+
+    .detalles-personales {
+        width: 100%; /* Asegurar que el contenedor de detalles ocupe todo el ancho */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Aumentar tamaño de encabezados en pantallas pequeñas */
+    }
+
+    .container {
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; /* Disminuir el tamaño de los encabezados en pantallas muy pequeñas */
+    }
+
+    .profile-pic {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        height: auto; /* Mantener proporciones */
+    }
+
+    .detalles-personales {
+        padding: 5px; /* Reducir padding en dispositivos más pequeños */
+    }
+}
